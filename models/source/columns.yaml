@@ -1,0 +1,7 @@
+columns:
+    url:
+        label: URL
+        searchable: true
+    retrieved_on:
+        label: Retrieved
+        type: date

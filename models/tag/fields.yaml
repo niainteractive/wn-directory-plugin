@@ -1,0 +1,16 @@
+fields:
+    name:
+        label: Name
+        span: left
+        required: 1
+    slug:
+        label: Slug
+        span: right
+        preset: name
+    tag_group:
+        label: Group
+        type: dropdown
+        span: left
+        options: getTagGroupOptions
+        default: reason
+        comment: Ownership, licence, ideology, reason. Groups only organise the backend.

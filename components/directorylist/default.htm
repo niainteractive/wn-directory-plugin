@@ -1,0 +1,17 @@
+{% if category %}
+    <h2>{{ category.name }}</h2>
+    {% if category.description %}<p>{{ category.description }}</p>{% endif %}
+{% endif %}
+
+<ul class="directory-list">
+    {% for entry in entries %}
+        <li class="directory-list__item">
+            <a href="/products/{{ entry.slug }}">{{ entry.name }}</a>
+            {% if entry.summary %}<span class="directory-list__summary">{{ entry.summary }}</span>{% endif %}
+        </li>
+    {% else %}
+        <li class="directory-list__empty">Nothing listed here yet.</li>
+    {% endfor %}
+</ul>
+
+{{ entries.render|raw }}

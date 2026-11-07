@@ -1,0 +1,9 @@
+<ul class="directory-categories">
+    {% for item in categories %}
+        <li class="directory-categories__item directory-categories__depth-{{ item.depth }}">
+            <a href="/categories/{{ item.category.slug }}">{{ item.category.name }}</a>
+        </li>
+    {% else %}
+        <li class="directory-categories__empty">No categories yet.</li>
+    {% endfor %}
+</ul>

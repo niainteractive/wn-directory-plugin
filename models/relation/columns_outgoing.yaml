@@ -1,0 +1,9 @@
+columns:
+    target:
+        label: 'Replaced entry'
+        relation: target
+        select: name
+    rank:
+        label: Rank
+    note:
+        label: Note

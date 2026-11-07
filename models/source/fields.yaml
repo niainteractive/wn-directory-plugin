@@ -1,0 +1,15 @@
+fields:
+    url:
+        label: URL
+        span: full
+        required: 1
+    retrieved_on:
+        label: Retrieved on
+        type: datepicker
+        mode: date
+        span: left
+    note:
+        label: Note
+        type: textarea
+        size: small
+        span: full

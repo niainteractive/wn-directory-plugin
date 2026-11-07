@@ -1,0 +1,39 @@
+incomingRelations:
+    label: 'Alternatives to this entry'
+    view:
+        list: $/niainteractive/directory/models/relation/columns_incoming.yaml
+        toolbarButtons: create|remove
+    manage:
+        form: $/niainteractive/directory/models/relation/fields_incoming.yaml
+
+outgoingRelations:
+    label: 'This entry replaces'
+    view:
+        list: $/niainteractive/directory/models/relation/columns_outgoing.yaml
+        toolbarButtons: create|remove
+    manage:
+        form: $/niainteractive/directory/models/relation/fields_outgoing.yaml
+
+categories:
+    label: Categories
+    view:
+        list: $/niainteractive/directory/models/category/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        list: $/niainteractive/directory/models/category/columns.yaml
+
+tags:
+    label: Tags
+    view:
+        list: $/niainteractive/directory/models/tag/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        list: $/niainteractive/directory/models/tag/columns.yaml
+
+sources:
+    label: Sources
+    view:
+        list: $/niainteractive/directory/models/source/columns.yaml
+        toolbarButtons: create|remove
+    manage:
+        form: $/niainteractive/directory/models/source/fields.yaml

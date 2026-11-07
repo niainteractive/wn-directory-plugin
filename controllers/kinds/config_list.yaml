@@ -1,0 +1,10 @@
+title: Kinds
+list: $/niainteractive/directory/models/kind/columns.yaml
+modelClass: NiaInteractive\Directory\Models\Kind
+recordUrl: niainteractive/directory/kinds/update/:id
+recordsPerPage: 25
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: sort_order
+    direction: asc

@@ -1,0 +1,50 @@
+{% if not entry %}
+    <p class="directory-entry__missing">That entry was not found.</p>
+{% else %}
+    <article class="directory-entry">
+        <h1>{{ entry.name }}</h1>
+        <p class="directory-entry__summary">{{ entry.summary }}</p>
+
+        <p class="directory-entry__meta">
+            {{ entry.kind.name }}
+            {% if entry.region %} &middot; {{ entry.region }}{% endif %}
+            {% if entry.price_note %} &middot; {{ entry.price_note }}{% endif %}
+        </p>
+
+        {% if isStale %}
+            <p class="directory-entry__stale">This entry has not been verified recently.</p>
+        {% endif %}
+
+        <h2>Alternatives to this</h2>
+        {% if alternatives|length %}
+            <ul class="directory-entry__alternatives">
+                {% for alt in alternatives %}
+                    <li><a href="/products/{{ alt.slug }}">{{ alt.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="directory-entry__none">No alternatives listed yet.</p>
+        {% endif %}
+
+        {% if replaced|length %}
+            <h2>This replaces</h2>
+            <ul class="directory-entry__replaces">
+                {% for old in replaced %}
+                    <li><a href="/products/{{ old.slug }}">{{ old.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if entry.body %}
+            <div class="directory-entry__body">{{ entry.body|raw }}</div>
+        {% endif %}
+
+        {% if entry.website_url %}
+            <p><a href="{{ entry.website_url }}" rel="nofollow noopener" target="_blank">Visit site</a></p>
+        {% endif %}
+
+        {% if entry.last_verified %}
+            <p class="directory-entry__verified">Last verified {{ entry.last_verified|date('j M Y') }}</p>
+        {% endif %}
+    </article>
+{% endif %}

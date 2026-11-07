@@ -1,0 +1,14 @@
+name: Category
+form: $/niainteractive/directory/models/category/fields.yaml
+modelClass: NiaInteractive\Directory\Models\Category
+defaultRedirect: niainteractive/directory/categorys
+
+create:
+    title: New category
+    redirect: niainteractive/directory/categorys/update/:id
+    redirectClose: niainteractive/directory/categorys
+
+update:
+    title: Edit category
+    redirect: niainteractive/directory/categorys
+    redirectClose: niainteractive/directory/categorys

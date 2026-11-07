@@ -1,0 +1,13 @@
+columns:
+    name:
+        label: Name
+        searchable: true
+        sortable: true
+    parent:
+        label: Parent
+        relation: parent
+        select: name
+        sortable: false
+    sort_order:
+        label: Order
+        sortable: true

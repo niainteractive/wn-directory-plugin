@@ -1,0 +1,10 @@
+title: Categories
+list: $/niainteractive/directory/models/category/columns.yaml
+modelClass: NiaInteractive\Directory\Models\Category
+recordUrl: niainteractive/directory/categories/update/:id
+recordsPerPage: 25
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: name
+    direction: asc

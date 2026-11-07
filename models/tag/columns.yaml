@@ -1,0 +1,8 @@
+columns:
+    name:
+        label: Name
+        searchable: true
+        sortable: true
+    tag_group:
+        label: Group
+        sortable: true

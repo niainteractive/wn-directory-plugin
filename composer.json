@@ -1,0 +1,19 @@
+{
+    "name": "niainteractive/wn-directory-plugin",
+    "type": "winter-plugin",
+    "description": "A reusable directory plugin for Winter CMS: nested categories, tagged entries, and directed relations between entries.",
+    "keywords": ["winter", "wintercms", "directory", "catalog", "categories", "relations"],
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Nia Interactive",
+            "homepage": "https://niainteractive.com"
+        }
+    ],
+    "require": {
+        "composer/installers": "~1.0|~2.0"
+    },
+    "extra": {
+        "installer-name": "directory"
+    }
+}

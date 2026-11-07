@@ -1,0 +1,16 @@
+fields:
+    source_entry_id:
+        label: 'Entry that replaces this one'
+        type: dropdown
+        span: full
+        required: 1
+        options: getSourceEntryIdOptions
+    rank:
+        label: Rank
+        span: left
+        comment: Lower numbers appear first.
+    note:
+        label: Note
+        type: textarea
+        size: small
+        span: full

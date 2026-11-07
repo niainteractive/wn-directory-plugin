@@ -1,0 +1,95 @@
+fields:
+    name:
+        label: Name
+        span: left
+        required: 1
+    slug:
+        label: Slug
+        span: right
+        preset: name
+        comment: Leave blank to generate from the name.
+
+    kind_id:
+        label: Kind
+        type: dropdown
+        span: left
+        required: 1
+    listing:
+        label: Listing
+        type: dropdown
+        span: right
+        options:
+            listed: 'Listed in categories'
+            reference: 'Reference only (never in category browse)'
+        default: listed
+
+    summary:
+        label: Summary
+        type: textarea
+        size: small
+        span: full
+    body:
+        label: Body
+        type: markdown
+        size: huge
+        span: full
+
+    categories:
+        label: Categories
+        type: relation
+        span: full
+    tags:
+        label: Tags
+        type: relation
+        span: full
+
+    website_url:
+        label: Website
+        span: left
+    price_note:
+        label: Price note
+        span: right
+        comment: 'Free text. "$14 for 64 loads", "$150/hour", "sliding scale".'
+
+    region:
+        label: Region
+        span: left
+    status:
+        label: Status
+        type: dropdown
+        span: right
+        options:
+            draft: Draft
+            active: Active
+            stale: Stale
+            defunct: Defunct
+        default: draft
+
+    last_verified:
+        label: Last verified
+        type: datepicker
+        mode: date
+        span: left
+    verified_by:
+        label: Verified by
+        span: right
+
+    incomingRelations:
+        label: 'Alternatives to this entry'
+        type: relation
+        span: full
+    outgoingRelations:
+        label: 'This entry replaces'
+        type: relation
+        span: full
+    sources:
+        label: Sources
+        type: relation
+        span: full
+
+    meta:
+        label: Extra fields (JSON)
+        type: codeeditor
+        language: json
+        span: full
+        comment: Kind-specific values such as jurisdiction, licence, or founding year.

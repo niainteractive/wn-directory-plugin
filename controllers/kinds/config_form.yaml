@@ -1,0 +1,14 @@
+name: Kind
+form: $/niainteractive/directory/models/kind/fields.yaml
+modelClass: NiaInteractive\Directory\Models\Kind
+defaultRedirect: niainteractive/directory/kinds
+
+create:
+    title: New kind
+    redirect: niainteractive/directory/kinds/update/:id
+    redirectClose: niainteractive/directory/kinds
+
+update:
+    title: Edit kind
+    redirect: niainteractive/directory/kinds
+    redirectClose: niainteractive/directory/kinds

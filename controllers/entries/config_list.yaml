@@ -1,0 +1,10 @@
+title: Entries
+list: $/niainteractive/directory/models/entry/columns.yaml
+modelClass: NiaInteractive\Directory\Models\Entry
+recordUrl: niainteractive/directory/entries/update/:id
+recordsPerPage: 25
+showSetup: true
+showCheckboxes: true
+defaultSort:
+    column: name
+    direction: asc

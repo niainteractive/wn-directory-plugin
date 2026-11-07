@@ -1,0 +1,14 @@
+name: Entry
+form: $/niainteractive/directory/models/entry/fields.yaml
+modelClass: NiaInteractive\Directory\Models\Entry
+defaultRedirect: niainteractive/directory/entrys
+
+create:
+    title: New entry
+    redirect: niainteractive/directory/entrys/update/:id
+    redirectClose: niainteractive/directory/entrys
+
+update:
+    title: Edit entry
+    redirect: niainteractive/directory/entrys
+    redirectClose: niainteractive/directory/entrys

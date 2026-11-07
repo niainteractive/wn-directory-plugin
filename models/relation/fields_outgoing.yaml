@@ -1,0 +1,15 @@
+fields:
+    target_entry_id:
+        label: 'Entry that this one replaces'
+        type: dropdown
+        span: full
+        required: 1
+        options: getTargetEntryIdOptions
+    rank:
+        label: Rank
+        span: left
+    note:
+        label: Note
+        type: textarea
+        size: small
+        span: full

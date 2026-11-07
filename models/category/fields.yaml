@@ -1,0 +1,25 @@
+fields:
+    name:
+        label: Name
+        span: left
+        required: 1
+    slug:
+        label: Slug
+        span: right
+        preset: name
+        comment: Leave blank to generate from the name.
+    parent_id:
+        label: Parent category
+        type: dropdown
+        span: left
+        options: getParentIdOptions
+        comment: Leave empty for a top-level category. Depth is unlimited.
+    sort_order:
+        label: Sort order
+        span: right
+        default: 0
+    description:
+        label: Description
+        type: textarea
+        size: small
+        span: full

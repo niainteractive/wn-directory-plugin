@@ -1,0 +1,22 @@
+fields:
+    relation_label:
+        label: Label for the relation
+        comment: What the edge is called in the interface. Default "replaces".
+        default: replaces
+
+    index_label:
+        label: Label for the index page
+        default: Replace This
+
+    show_tags:
+        label: Show tags on the frontend
+        type: switch
+        default: false
+
+    per_page:
+        label: Entries per page
+        default: 25
+
+    stale_after_days:
+        label: Days before an entry is flagged stale
+        default: 365

@@ -1,0 +1,14 @@
+name: Tag
+form: $/niainteractive/directory/models/tag/fields.yaml
+modelClass: NiaInteractive\Directory\Models\Tag
+defaultRedirect: niainteractive/directory/tags
+
+create:
+    title: New tag
+    redirect: niainteractive/directory/tags/update/:id
+    redirectClose: niainteractive/directory/tags
+
+update:
+    title: Edit tag
+    redirect: niainteractive/directory/tags
+    redirectClose: niainteractive/directory/tags

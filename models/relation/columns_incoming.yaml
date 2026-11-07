@@ -1,0 +1,9 @@
+columns:
+    source:
+        label: 'Alternative entry'
+        relation: source
+        select: name
+    rank:
+        label: Rank
+    note:
+        label: Note

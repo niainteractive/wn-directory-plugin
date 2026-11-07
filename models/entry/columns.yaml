@@ -1,0 +1,24 @@
+columns:
+    name:
+        label: Name
+        searchable: true
+        sortable: true
+    kind:
+        label: Kind
+        relation: kind
+        select: name
+        sortable: false
+    listing:
+        label: Listing
+        sortable: true
+    status:
+        label: Status
+        sortable: true
+    last_verified:
+        label: Verified
+        type: date
+        sortable: true
+    updated_at:
+        label: Updated
+        type: datetime
+        sortable: true
