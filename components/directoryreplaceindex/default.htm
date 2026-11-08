@@ -1,15 +1,22 @@
-<nav class="directory-replace__alphabet">
-    {% for a in alphabet %}
-        <a href="/replace/{{ a }}"{% if a == letter %} class="is-active"{% endif %}>{{ a }}</a>
-    {% endfor %}
-</nav>
-
-<ul class="directory-replace">
-    {% for entry in entries %}
-        <li class="directory-replace__item">
-            <a href="/products/{{ entry.slug }}">{{ entry.name }}</a>
-        </li>
-    {% else %}
-        <li class="directory-replace__empty">Nothing listed under this letter yet.</li>
-    {% endfor %}
-</ul>
+<table class="table table-striped align-middle">
+    <thead>
+        <tr>
+            <th>What you use</th>
+            <th class="text-center">Alternatives</th>
+            <th>Try first</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in entries %}
+            <tr>
+                <td><a href="/products/{{ entry.slug }}">{{ entry.name }}</a></td>
+                <td class="text-center">{{ entry.alt_count }}</td>
+                <td>{% if entry.top_alternative %}{{ entry.top_alternative }}{% else %}&mdash;{% endif %}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">Nothing listed yet.</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

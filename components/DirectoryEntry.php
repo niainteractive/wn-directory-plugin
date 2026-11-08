@@ -32,9 +32,11 @@ class DirectoryEntry extends ComponentBase
 
         if (!$entry) {
             $this->page['entry'] = null;
+            $this->page['pageTitle'] = 'Not found';
             return;
         }
 
+        $this->page['pageTitle']    = $entry->name;
         $this->page['entry']        = $entry;
         $this->page['alternatives'] = $entry->alternatives()->get();
         $this->page['replaced']     = $entry->replacedEntries()->get();

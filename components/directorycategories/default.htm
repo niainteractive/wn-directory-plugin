@@ -1,7 +1,8 @@
-<ul class="directory-categories">
+<ul class="directory-categories list-unstyled">
     {% for item in categories %}
-        <li class="directory-categories__item directory-categories__depth-{{ item.depth }}">
+        <li class="directory-categories__item" style="padding-left: {{ item.depth * 1.5 }}rem; margin-bottom: .35rem;">
             <a href="/categories/{{ item.category.slug }}">{{ item.category.name }}</a>
+            <span class="badge bg-secondary">{{ item.count }}</span>
         </li>
     {% else %}
         <li class="directory-categories__empty">No categories yet.</li>

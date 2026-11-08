@@ -41,8 +41,16 @@ class DirectoryReplaceIndex extends ComponentBase
             $letter = '';
         }
 
-        $this->page['entries']  = $query->orderBy('sort_name')->get();
-        $this->page['letter']   = $letter;
-        $this->page['alphabet'] = range('A', 'Z');
+        $entries = $query->orderBy('sort_name')->get();
+
+        foreach ($entries as $entry) {
+            $entry->setAttribute('alt_count', $entry->alternatives()->count());
+            $entry->setAttribute('top_alternative', \optional($entry->alternatives()->first())->name);
+        }
+
+        $this->page['entries']   = $entries;
+        $this->page['letter']    = $letter;
+        $this->page['alphabet']  = range('A', 'Z');
+        $this->page['pageTitle'] = 'Replace This';
     }
 }

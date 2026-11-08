@@ -68,5 +68,8 @@ class DirectoryList extends ComponentBase
         }
 
         $this->page['entries'] = $query->orderBy('sort_name')->paginate($perPage);
+        $this->page['pageTitle'] = !empty($this->page['category'])
+            ? $this->page['category']->name
+            : 'Category';
     }
 }
