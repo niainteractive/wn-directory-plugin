@@ -46,6 +46,9 @@ class DirectoryList extends ComponentBase
         }
 
         $slug  = trim((string) $this->property('categorySlug'));
+        if ($slug === '') {
+            $slug = trim((string) $this->param('slug'));
+        }
         $query = Entry::published()->listed()->with('kind');
 
         if ($slug !== '') {
