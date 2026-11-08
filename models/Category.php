@@ -7,6 +7,8 @@ class Category extends Model
 {
     public $table = 'niainteractive_directory_categories';
 
+    protected $guarded = [];
+
     public $rules = [
         'name' => 'required|between:2,120',
         'slug' => 'required|between:2,160',

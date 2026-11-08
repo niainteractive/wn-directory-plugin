@@ -14,6 +14,8 @@ class Entry extends Model
 
     public $table = 'niainteractive_directory_entries';
 
+    protected $guarded = [];
+
     protected $casts = [
         'last_verified' => 'date',
     ];

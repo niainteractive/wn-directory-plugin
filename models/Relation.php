@@ -18,6 +18,8 @@ class Relation extends Model
 
     public $table = 'niainteractive_directory_relations';
 
+    protected $guarded = [];
+
     public $rules = [
         'source_entry_id' => 'required|exists:niainteractive_directory_entries,id',
         'target_entry_id' => 'required|exists:niainteractive_directory_entries,id',

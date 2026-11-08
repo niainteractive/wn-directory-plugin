@@ -6,6 +6,8 @@ class Source extends Model
 {
     public $table = 'niainteractive_directory_sources';
 
+    protected $guarded = [];
+
     public $rules = [
         'url' => 'required|url|max:500',
     ];

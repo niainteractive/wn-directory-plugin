@@ -6,6 +6,8 @@ class Kind extends Model
 {
     public $table = 'niainteractive_directory_kinds';
 
+    protected $guarded = [];
+
     public $rules = [
         'name' => 'required|between:2,120',
         'slug' => 'required|between:2,160',
