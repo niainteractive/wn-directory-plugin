@@ -1,9 +1,17 @@
 <?php namespace NiaInteractive\Directory\Models;
 
-use System\Models\SettingModel;
+use Model;
 
-class Settings extends SettingModel
+/**
+ * Winter 1.3 implements settings as a behaviour on a normal model
+ * (System\Behaviors\SettingsModel), not as a SettingModel base class.
+ */
+class Settings extends Model
 {
+    public $implement = [
+        \System\Behaviors\SettingsModel::class,
+    ];
+
     public $settingsCode = 'niainteractive_directory_settings';
 
     public $settingsFields = 'fields.yaml';
